@@ -89,6 +89,12 @@
 
     vect cylinToSpher (vect) ;                                              // CYLINDRICAL TO SPHERICAL //
 
+    
+    void printVect (vect) ;                                                 // PRINT VECTOR //
+
+
+    void scanVect (vect*) ;                                                 // GET VECTOR //
+
 
 #endif
 
