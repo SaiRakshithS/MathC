@@ -55,39 +55,39 @@
 
 
 
-    vect shearY (vect, double, double) ;                                   // SHEAR ABOUT Y AXIS //
+    vect shearY (vect, double, double) ;                                    // SHEAR ABOUT Y AXIS //
 
 
 
-    vect shearZ (vect, double, double) ;                                  // SHEAR ABOUT Z AXIS //
+    vect shearZ (vect, double, double) ;                                    // SHEAR ABOUT Z AXIS //
 
 
 
-    vect add (vect, vect) ;                                               // ADD //
+    vect add (vect, vect) ;                                                 // ADD //
 
 
 
-    vect sub (vect, vect) ;                                               // SUBTRACT //
+    vect sub (vect, vect) ;                                                 // SUBTRACT //
 
 
 
-    vect cylin (vect) ;                                                   // CONVERT TO CYLINDRICAL //
+    vect cylin (vect) ;                                                     // CONVERT TO CYLINDRICAL //
 
 
 
-    vect spher (vect) ;                                                   // CONVERT TO SPHERICAL //
+    vect spher (vect) ;                                                     // CONVERT TO SPHERICAL //
 
 
-    vect revCylin (vect) ;                                                // CYLINDRICAL TO RECTANGULAR //
+    vect revCylin (vect) ;                                                  // CYLINDRICAL TO RECTANGULAR //
 
 
-    vect revSpher (vect) ;                                                // SPHERICAL TO RECTANGULAR //
+    vect revSpher (vect) ;                                                  // SPHERICAL TO RECTANGULAR //
 
 
-    vect spherToCylin (vect) ;                                            // SPHERICAL TO CYLINDRICAL //
+    vect spherToCylin (vect) ;                                              // SPHERICAL TO CYLINDRICAL //
 
 
-    vect cylinToSpher (vect) ;                                            // CYLINDRICAL TO SPHERICAL //
+    vect cylinToSpher (vect) ;                                              // CYLINDRICAL TO SPHERICAL //
 
 
 #endif
