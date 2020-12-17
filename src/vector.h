@@ -5,7 +5,7 @@
 
         {
             double x ;
-            double y ;                                                          // VECTOR //
+            double y ;                                                      // VECTOR //
             double z ;
         } vect ;
 
@@ -19,15 +19,15 @@
 
 
 
-    double magn (vect) ;                                                      // MAGNITUDE OF VECTOR //
+    double magn (vect) ;                                                    // MAGNITUDE OF VECTOR //
 
 
 
-    vect scaleall (vect, double) ;                                              // SCALE ALL DIMENSIONS //
+    vect scaleall (vect, double) ;                                          // SCALE ALL DIMENSIONS //
 
 
 
-    vect scale (vect, double, double, double) ;                                 // SCALE INDIVIDUALLY //
+    vect scale (vect, double, double, double) ;                             // SCALE INDIVIDUALLY //
 
 
 
@@ -35,61 +35,60 @@
 
 
 
-    double box (vect, vect, vect) ;                                       // TRIPLE / BOX PRODUCT //
+    double box (vect, vect, vect) ;                                         // TRIPLE / BOX PRODUCT //
 
 
 
-    vect rotX (vect, double) ;                                          // ROTATE ABOUT X AXIS //
+    vect rotX (vect, double) ;                                              // ROTATE ABOUT X AXIS //
 
 
 
-    vect rotY (vect, double) ;                                          // ROTATE ABOUT Y AXIS //
+    vect rotY (vect, double) ;                                              // ROTATE ABOUT Y AXIS //
 
 
 
-    vect rotZ (vect, double) ;                                          // ROTATE ABOUT Z AXIS //
+    vect rotZ (vect, double) ;                                              // ROTATE ABOUT Z AXIS //
 
 
 
-    vect shearX (vect, double, double) ;                              // SHEAR ABOUT X AXIS
+    vect shearX (vect, double, double) ;                                    // SHEAR ABOUT X AXIS
 
 
 
-    vect shearY (vect, double, double) ;                              // SHEAR ABOUT Y AXIS //
+    vect shearY (vect, double, double) ;                                   // SHEAR ABOUT Y AXIS //
 
 
 
-    vect shearZ (vect, double, double) ;                              // SHEAR ABOUT Z AXIS //
+    vect shearZ (vect, double, double) ;                                  // SHEAR ABOUT Z AXIS //
 
 
 
-    vect add (vect, vect) ;                                                 // ADD //
+    vect add (vect, vect) ;                                               // ADD //
 
 
 
-    vect sub (vect, vect) ;                                                 // SUBTRACT //
+    vect sub (vect, vect) ;                                               // SUBTRACT //
 
 
 
-    vect cylin (vect) ;                                                       // CONVERT TO CYLINDRICAL //
+    vect cylin (vect) ;                                                   // CONVERT TO CYLINDRICAL //
 
 
 
-    vect spher (vect) ;                                                       // CONVERT TO SPHERICAL //
+    vect spher (vect) ;                                                   // CONVERT TO SPHERICAL //
 
 
-    vect revCylin (vect) ;                                                    // CYLINDRICAL TO RECTANGULAR //
+    vect revCylin (vect) ;                                                // CYLINDRICAL TO RECTANGULAR //
 
 
-    vect revSpher (vect) ;                                                    // SPHERICAL TO RECTANGULAR //
+    vect revSpher (vect) ;                                                // SPHERICAL TO RECTANGULAR //
 
 
-    vect spherToCylin (vect) ;                                                // SPHERICAL TO CYLINDRICAL //
+    vect spherToCylin (vect) ;                                            // SPHERICAL TO CYLINDRICAL //
 
 
-    vect cylinToSpher (vect) ;                                                // CYLINDRICAL TO SPHERICAL //
+    vect cylinToSpher (vect) ;                                            // CYLINDRICAL TO SPHERICAL //
 
 
 #endif
 
-/********************************************* END FUNCTION DECLARATION *******************************************/
