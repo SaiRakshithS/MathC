@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include <math.h>
 #include "vector.h"
 
@@ -168,7 +169,7 @@
         {
             vect result ;
 
-            double r = sqrt ((a.x * a.x) + (a.y * a.y)) ;                       // CONVERT FROM RECTANGULAR TO CYLINDRICAL
+            double r = sqrt ((a.x * a.x) + (a.y * a.y)) ;                       // CONVERT FROM RECTANGULAR TO CYLINDRICAL //
             double theta = atan2 (a.y, a.x) ;
 
             result.x = r ;
@@ -183,7 +184,7 @@
         {
             vect result ;
 
-            double r = sqrt ((a.x * a.x) + (a.y * a.y) + (a.z * a.z)) ;         // CONVERT FROM RECTANGULAR TO SPHERICAL
+            double r = sqrt ((a.x * a.x) + (a.y * a.y) + (a.z * a.z)) ;         // CONVERT FROM RECTANGULAR TO SPHERICAL //
             double theta = atan2 (a.y, a.x) ;
             double phi = acos (a.z / r) ;
 
@@ -199,7 +200,7 @@
         {
             vect result ;
 
-            result.x = a.x * cos (a.y) ;                                        // CONVERT FROM CYLINDRICAL TO RECTANGULAR
+            result.x = a.x * cos (a.y) ;                                        // CONVERT FROM CYLINDRICAL TO RECTANGULAR //
             result.y = a.x * sin (a.y) ;
             result.z = a.z ;
 
@@ -212,7 +213,7 @@
             vect result ;
 
             result.x = a.x * sin (a.z) * cos (a.y) ;
-            result.y = a.x * sin (a.z) * sin (a.y) ;                            // CONVERT FROM SPHERICAL TO RECTANGULAR
+            result.y = a.x * sin (a.z) * sin (a.y) ;                            // CONVERT FROM SPHERICAL TO RECTANGULAR //
             result.z = a.x * cos (a.z) ;
 
             return result ;
@@ -224,7 +225,7 @@
             vect result ;
 
             result.x = a.x * cos (a.z) ;
-            result.y = a.y ;                                                    // CONVERT FROM SPHERICAL TO CYLINDRICAL
+            result.y = a.y ;                                                    // CONVERT FROM SPHERICAL TO CYLINDRICAL //
             result.z = a.x * sin (a.z) ;
 
             return result ;
@@ -238,9 +239,22 @@
             double phi = sqrt ((a.x * a.x) + (a.z * a.z)) ;
 
             result.x = phi  ;
-            result.y = a.y ;                                                    // CONVERT FROM CYLINDRICAL TO SPHERICAL
+            result.y = a.y ;                                                    // CONVERT FROM CYLINDRICAL TO SPHERICAL //
             result.z = acos (a.z / phi) ;
 
             return result ;
+        }
+
+
+    void printVect (vect a)
+
+        {
+            printf ("(%lf, %lf, %lf)", a.x, a.y, a.z) ;                         // PRINT A VECTOR //
+        }
+
+    void scanVect (vect* a)
+
+        {
+            scanf ("%lf, %lf, %lf", &a -> x, &a -> y, &a -> z) ;               // GET A VECTOR //
         }
 
