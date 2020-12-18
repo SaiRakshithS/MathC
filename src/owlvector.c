@@ -164,6 +164,15 @@
             return result ;
         }
 
+    vect normalize (vect a)
+        
+        {
+            vect unit ;
+            unit = scaleall (a, magn (a)) ;                                     // NORMALIZE A VECTOR //
+            
+            return unit ;
+        }
+
     vect cylin (vect a)
 
         {
