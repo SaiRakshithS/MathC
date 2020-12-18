@@ -1,5 +1,5 @@
-#ifndef VECTOR_H_
-#define VECTOR_H_
+#ifndef OWLVECTOR_H_
+#define OWLVECTOR_H_
 
     typedef struct
 
