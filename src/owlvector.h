@@ -22,6 +22,8 @@
     double magn (vect) ;                                                    // MAGNITUDE OF VECTOR //
 
 
+    double magnSquare (vect a) ;                                            // SQUARE OF MAGNITUDE //
+
 
     vect scaleall (vect, double) ;                                          // SCALE ALL DIMENSIONS //
 
