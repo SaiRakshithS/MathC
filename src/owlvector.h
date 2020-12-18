@@ -71,6 +71,10 @@
 
 
 
+    vect normailize (vect) ;                                                // NORMALIZE A VECTOR //
+
+
+
     vect cylin (vect) ;                                                     // CONVERT TO CYLINDRICAL //
 
 
