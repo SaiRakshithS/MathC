@@ -28,6 +28,13 @@
             return magn ;                                                       // MAGNITUDE //
         }
 
+    double magnSquare (vect a)
+
+        {
+            double magnSquare = (a.x * a.x) + (a.y * a.y) + (a.z * a.z) ;
+            return magnSquare ;
+        }
+
     vect scaleall (vect a, double b)
 
         {
