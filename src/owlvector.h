@@ -23,7 +23,9 @@
     double magn (vect) ;                                                    // MAGNITUDE OF VECTOR //
 
 
+
     double magnSquare (vect a) ;                                            // SQUARE OF MAGNITUDE //
+
 
 
     vect scaleall (vect, double) ;                                          // SCALE ALL DIMENSIONS //
@@ -85,19 +87,25 @@
     vect spher (vect) ;                                                     // CONVERT TO SPHERICAL //
 
 
+
     vect revCylin (vect) ;                                                  // CYLINDRICAL TO RECTANGULAR //
+
 
 
     vect revSpher (vect) ;                                                  // SPHERICAL TO RECTANGULAR //
 
 
+
     vect spherToCylin (vect) ;                                              // SPHERICAL TO CYLINDRICAL //
+
 
 
     vect cylinToSpher (vect) ;                                              // CYLINDRICAL TO SPHERICAL //
 
+
     
     void printVect (vect) ;                                                 // PRINT VECTOR //
+
 
 
     void scanVect (vect*) ;                                                 // GET VECTOR //
