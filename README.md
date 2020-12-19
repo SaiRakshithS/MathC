@@ -2,7 +2,7 @@
 
 A simple, header only, math library for the C Language. 
 
-It presently contains a 3D Vector, and quaternion library. All values default to ```double```.
+It presently contains a 3D Vector, and Quaternion library. All values default to ```double```.
 
 Dependencies :
 
