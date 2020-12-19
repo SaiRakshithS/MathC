@@ -12,28 +12,28 @@
 
         } quaternion ;
 
-    quaternion conjugateQ (quaternion) ;
+    quaternion conjugateQ (quaternion) ;                                // CONJUGATE OF QUATERNION //
 
 
-    double modQ (quaternion) ;
+    double modQ (quaternion) ;                                         // MODULUS OF QUATERNION //
 
 
-    quaternion inverseQ (quaternion) ;
+    quaternion inverseQ (quaternion) ;                                // INVERSE OF QUATERNION //
 
 
-    quaternion addQ (quaternion, quaternion) ;
+    quaternion addQ (quaternion, quaternion) ;                       // ADD 2 QUATERNIONS //
 
 
-    quaternion subQ (quaternion, quaternion) ;
+    quaternion subQ (quaternion, quaternion) ;                      // SUBTRACT 2 QUATERNIONS //
 
 
-    quaternion mul2Q (quaternion, quaternion) ;
+    quaternion mul2Q (quaternion, quaternion) ;                     // MULTIPLY 2 QUATERNIONS //
 
 
-    quaternion mul3Q (quaternion, quaternion, quaternion) ;
+    quaternion mul3Q (quaternion, quaternion, quaternion) ;        // MULTIPLY 3 QUATERNIONS //
 
 
-    vect rot (vect, vect, double) ;
+    vect rot (vect, vect, double) ;                               // ROTATE A VECTOR ABOUT A VECTOR BY AN ANGLE //
 
 
 #endif
