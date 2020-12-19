@@ -44,6 +44,10 @@
 
 
 
+    vect normailize (vect) ;                                                // NORMALIZE A VECTOR //
+
+
+
     vect rotX (vect, double) ;                                              // ROTATE ABOUT X AXIS //
 
 
@@ -68,15 +72,15 @@
 
 
 
+    vect reflect (vect, vect) ;                                             // REFLECT A VECTOR ABOUT A NORMAL //
+
+
+
     vect add (vect, vect) ;                                                 // ADD //
 
 
 
     vect sub (vect, vect) ;                                                 // SUBTRACT //
-
-
-
-    vect normailize (vect) ;                                                // NORMALIZE A VECTOR //
 
 
 
