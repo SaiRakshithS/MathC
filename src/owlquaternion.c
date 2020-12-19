@@ -7,7 +7,7 @@
             quaternion result ;
 
             result.re = a.re ;
-            result.im = scaleall (a.im, -1.0) ;
+            result.im = scaleall (a.im, -1.0) ;   
 
             return result ;
         }
