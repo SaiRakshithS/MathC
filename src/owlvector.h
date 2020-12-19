@@ -7,6 +7,7 @@
             double x ;
             double y ;                                                      // VECTOR //
             double z ;
+        
         } vect ;
 
 
