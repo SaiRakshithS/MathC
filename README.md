@@ -7,7 +7,7 @@ It presently contains a 3D Vector, and quaternion library. All values default to
 Dependencies :
 
 
-For ```owlvector.h``` : ```math.h```, ```stdio.h```.
+For ```owlvector.h```     : ```math.h```, ```stdio.h```.
 
 For ```owlquaternion.h``` : ```owlvector.h```.
 
