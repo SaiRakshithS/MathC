@@ -75,6 +75,15 @@
             return box ;
         }
 
+    vect normalize (vect a)
+        
+        {
+            vect unit ;
+            unit = scaleall (a, ( 1 / magn (a) )) ;                                    // NORMALIZE A VECTOR //
+            
+            return unit ;
+        }
+
     vect rotX (vect a, double angle)
 
         {
@@ -169,15 +178,6 @@
             result.z = a.z - b.z ;
 
             return result ;
-        }
-
-    vect normalize (vect a)
-        
-        {
-            vect unit ;
-            unit = scaleall (a, magn (a)) ;                                  // NORMALIZE A VECTOR //
-            
-            return unit ;
         }
 
     vect cylin (vect a)
