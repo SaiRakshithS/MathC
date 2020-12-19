@@ -1,6 +1,8 @@
 #ifndef QUATERNION_H_
 #define QUATERNION_H_
 
+    #include "vector.h"
+
 
     typedef struct
 
