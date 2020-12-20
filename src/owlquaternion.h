@@ -33,7 +33,7 @@
     quaternion mul3Q (quaternion, quaternion, quaternion) ;        // MULTIPLY 3 QUATERNIONS //
 
 
-    vect rot (vect, vect, double) ;                               // ROTATE A VECTOR ABOUT A VECTOR BY AN ANGLE //
+    quaternion rot (vect, vect, double) ;                               // ROTATE A VECTOR ABOUT A VECTOR BY AN ANGLE //
 
 
 #endif
