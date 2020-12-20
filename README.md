@@ -1,6 +1,6 @@
 # Owl
 
-A simple, header only, math library for the C Language. 
+A simple, header only, math and physics library for the C Language. 
 
 It presently contains a 3D Vector, and Quaternion library. It also contains a very primitive physics library.
 
