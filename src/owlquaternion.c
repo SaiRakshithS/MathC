@@ -83,10 +83,10 @@
             return result ;
         }
 
-    vect rot (vect a, vect n, double angle)
+    quaternion rot (vect a, vect n, double angle)
 
         {
-            vect result ;
+            quaternion result ;
 
             quaternion pure ;
             pure.re = 0.0 ;
@@ -97,7 +97,7 @@
             rotator.im = normalize (n) ;
             rotator.im = scaleall (rotator.im, sin (angle / 2)) ;
 
-            result = mul3Q (rotator, pure, conjugateQ (rotator)).im ;
+            result = mul3Q (rotator, pure, conjugateQ (rotator)) ;
 
             return result ;
         }
