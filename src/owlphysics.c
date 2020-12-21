@@ -187,3 +187,4 @@
         }
 
     // Things to do : Add collisions, update "update" funtion to include collisions.
+    // Consider new libraries ? Will it be ok, or might as well include everything here ? Think about cross dependancies, and infinite "#include <>" loop.
