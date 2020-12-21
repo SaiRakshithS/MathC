@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include <math.h>
 #include "owlquaternion.h"
 
@@ -111,5 +112,5 @@
     void scanQ (quaternion* a)
         
         {
-            scanf("%lf %lf %lf %lf", &a -> re, &a -> im.x, &a -> im.y, &a -> im.z) ;
+            scanf ("%lf %lf %lf %lf", &a -> re, &a -> im.x, &a -> im.y, &a -> im.z) ;
         }
