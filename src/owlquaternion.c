@@ -1,5 +1,5 @@
 #include <math.h>
-#include "quaternion.h"
+#include "owlquaternion.h"
 
     quaternion conjugateQ (quaternion a)
 
@@ -100,4 +100,16 @@
             result = mul3Q (rotator, pure, conjugateQ (rotator)) ;
 
             return result ;
+        }
+
+    void printQ (quaternion a)
+        
+        {
+            printf ("%lf + %lf i + %lf j + %lf k\n", a.re, a.im.x, a.im.y, a.im.z) ;
+        }
+
+    void scanQ (quaternion* a)
+        
+        {
+            scanf("%lf %lf %lf %lf", &a -> re, &a -> im.x, &a -> im.y, &a -> im.z) ;
         }
