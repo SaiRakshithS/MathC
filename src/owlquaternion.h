@@ -1,7 +1,7 @@
-#ifndef QUATERNION_H_
-#define QUATERNION_H_
+#ifndef OWLQUATERNION_H_
+#define OWLQUATERNION_H_
 
-    #include "vector.h"
+    #include "owlvector.h"
 
 
     typedef struct
