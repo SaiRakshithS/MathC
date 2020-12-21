@@ -36,4 +36,10 @@
     quaternion rot (vect, vect, double) ;                               // ROTATE A VECTOR ABOUT A VECTOR BY AN ANGLE //
 
 
+    void printQ (quaternion) ;                                          // PRINT A QUATERNION //
+
+
+    void scanQ (quaternion*) ;                                          // GET A QUATERNION FROM USER //
+
+
 #endif
