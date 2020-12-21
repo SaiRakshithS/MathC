@@ -17,9 +17,9 @@
 
                 {
                     vect temporary = a[i].position ;
-                    temporary = scaleall (temporary, a[i].mass) ;
-
-                    centreMass = add (centreMass, temporary) ;
+                    temporary = scaleall (temporary, a[i].mass) ;       // Finding centre of mass of general polyhedron is a challenge. It can calculate for system of particles.
+                                                                        // However, there is no parameter for centre of mass in the "Object" Structure.
+                    centreMass = add (centreMass, temporary) ;          // Combining this with "update" function must be thought out.   
                     totalMass += a[i].mass ;
                 }
 
@@ -40,8 +40,8 @@
 
             double grav = (G * a.mass) / magnSquare (r) ;
 
-            r = normailize (r) ;
-
+            r = normailize (r) ;                                    // This works perfectly fine for spheres and point objects. Should create a new gravity function
+                                                                    // for polyhedra. Might be challenging, since they don't obey Shell Theorem.        
             vect gravityField ;
 
             gravityField = scaleall (r, grav) ;
@@ -126,7 +126,7 @@
                         {
                             vect elecOnI = electricField (a[i].position, a[j], permittivity) ;
                             vect elecOnJ = electricField (a[j].position, a[i], permittivity) ;
-
+                                                                                                    // See gravity section.
                             elecOnI = scaleall (elecOnI, a[i].charge) ;
                             elecOnJ = scaleall (elecOnJ, a[j].charge) ;
 
@@ -153,8 +153,8 @@
                 {
                     vect acc = acceleration (a[i]) ;
                     a[i].velocity = scaleall (acc, delTime) ;
-                    a[i].position = scaleall (a[i].velocity, delTime) ;
-                }
+                    a[i].position = scaleall (a[i].velocity, delTime) ;                             // Apply function takes care of energy. Some issues might remain
+                }                                                                                   // as far as accuracy is concerned, and efficient use of "delTime"
         }
 
 
@@ -176,10 +176,10 @@
     void rotCylin (object a, vect n, double angle)
 
         {
-            a.shape.cylinder.surfaceNormal = ( rotQ (a.shape.cylinder.surfaceNormal, n, angle) ).im ;
-            a.position = ( rotQ (a.position, n, angle) ).im ;
-        }
-
+            a.shape.cylinder.surfaceNormal = ( rotQ (a.shape.cylinder.surfaceNormal, n, angle) ).im ;   // Rotation works perfectly fine. Should think about how materials
+            a.position = ( rotQ (a.position, n, angle) ).im ;                                           // added by user on top of the surface will transfer over.     
+        }                                                                                               // Rotating tangent vector is an idea, but doesn't seem plausible.
+            
     void rotSpher (object a, vect n, double angle)
 
         {
