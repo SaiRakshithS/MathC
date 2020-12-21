@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <math.h>
-#include "vector.h"
+#include "owlvector.h"
 
     double dot (vect a, vect b)
 
