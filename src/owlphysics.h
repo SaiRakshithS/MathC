@@ -1,12 +1,12 @@
-#ifndef PHYSICS_H_
-#define PHYSICS_H_
+#ifndef OWLPHYSICS_H_
+#define OWLPHYSICS_H_
 
 #define G  6.672                     // Do change value of constants as you please.
 #define H  6.626                     // They are scaled up to give understandable values.
 #define PI 3.141592653589793
 
 
-    #include "quaternion.h"
+    #include "owlquaternion.h"
     
 
         typedef struct
