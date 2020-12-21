@@ -5,7 +5,7 @@
     double dot (vect a, vect b)
 
         {
-            double dot = (a.x * b.x) + (a.y * b.y) + (a.z + b.z) ;              // DOT PRODUCT //
+            double dot = (a.x * b.x) + (a.y * b.y) + (a.z + b.z) ;              // Look at definitions of "inner product", and figure out implementation
             return dot ;
         }
 
@@ -15,7 +15,7 @@
             vect cross ;
 
             cross.x = (a.y * b.z) - (a.z * b.y) ;
-            cross.y = (a.z * b.x) - (a.x * b.z) ;                               // CROSS PRODUCT //
+            cross.y = (a.z * b.x) - (a.x * b.z) ;                               // Will a 2D cross be necessary here ? What about algorithm for crosses in general ?
             cross.z = (a.x * b.y) - (a.y * b.x) ;
 
             return cross ;
@@ -25,13 +25,13 @@
 
         {
             double magn = sqrt ((a.x * a.x) + (a.y * a.y) + (a.z * a.z)) ;
-            return magn ;                                                       // MAGNITUDE //
+            return magn ;                                                       
         }
 
     double magnSquare (vect a)
 
         {
-            double magnSquare = (a.x * a.x) + (a.y * a.y) + (a.z * a.z) ;      // SQUARE OF MAGNITUDE //
+            double magnSquare = (a.x * a.x) + (a.y * a.y) + (a.z * a.z) ;      
             return magnSquare ;
         }
 
@@ -39,7 +39,7 @@
 
         {
             a.x *= b ;
-            a.y *= b ;                                                         // SCALE ALL COMPONENTS//
+            a.y *= b ;                                                        
             a.z *= b ;
 
             return a ;
@@ -49,7 +49,7 @@
 
         {
             a.x *= p ;
-            a.y *= q ;                                                         // SCALE EACH COMPONENT //
+            a.y *= q ;                                                         
             a.z *= r ;
 
             return a ;
@@ -59,7 +59,7 @@
 
         {
             double dotP = dot (a, b) ;
-            double magnit = magn (a) * magn (b) ;                              // ANGLE BETWEEN VECTORS //
+            double magnit = magn (a) * magn (b) ;                              // A new function to return the outer angle ? Or is it redundant ?
             double cos = dotP / magnit ;
             double angle = acos (cos) ;
 
@@ -70,7 +70,7 @@
 
         {
             vect cros = cross (b, c) ;
-            double box = dot (a, cros) ;                                       // TRIPLE / BOX / MIXED PRODUCT //
+            double box = dot (a, cros) ;                                       
 
             return box ;
         }
@@ -79,7 +79,7 @@
         
         {
             vect unit ;
-            unit = scaleall (a, ( 1 / magn (a) )) ;                                    // NORMALIZE A VECTOR //
+            unit = scaleall (a, ( 1 / magn (a) )) ;                                   
             
             return unit ;
         }
@@ -90,7 +90,7 @@
             vect result ;
 
             result.x = a.x ;
-            result.y = (a.y * cos (angle)) - (a.z * sin (angle)) ;             // ROTATE ABOUT X AXIS //
+            result.y = (a.y * cos (angle)) - (a.z * sin (angle)) ;            
             result.z = (a.y * sin (angle)) + (a.z * cos (angle)) ;
 
             return result ;
@@ -102,7 +102,7 @@
             vect result ;
 
             result.x = (a.z * sin (angle)) + (a.x * cos (angle)) ;
-            result.y = a.y ;                                                   // ROTATE ABOUT Y AXIS //
+            result.y = a.y ;                                                  // General utility rotations seem good. They are not made redundant by rotQ function.
             result.z = (a.y * cos (angle)) - (a.x * sin (angle)) ;
 
             return result ;
@@ -114,7 +114,7 @@
             vect result ;
 
             result.x = (a.x * cos (angle)) - (a.y * sin (angle)) ;
-            result.y = (a.x * sin (angle)) + (a.y * cos (angle)) ;             // ROTATE ABOUT Z AXIS //
+            result.y = (a.x * sin (angle)) + (a.y * cos (angle)) ;             
             result.z = a.z ;
 
             return result ;
@@ -126,7 +126,7 @@
             vect result ;
 
             result.x = a.x ;
-            result.y = a.y + (shY * a.x) ;                                     // SHEAR IN X AXIS //
+            result.y = a.y + (shY * a.x) ;                                     
             result.z = a.z + (shZ * a.z) ;
 
             return result ;
@@ -138,7 +138,7 @@
             vect result ;
 
             result.x = a.x + (shX * a.y) ;
-            result.y = a.y ;                                                   // SHEAR IN Y AXIS //
+            result.y = a.y ;                                                   // Figure out shearing about random vector. 
             result.z = a.z + (shZ * a.z) ;
 
             return result ;
@@ -150,7 +150,7 @@
             vect result ;
 
             result.x = a.x + (shX * a.z) ;
-            result.y = a.y + (shY * a.z) ;                                     // SHEAR IN Z AXIS //
+            result.y = a.y + (shY * a.z) ;                                     
             result.z = a.z ;
 
             return result ;
@@ -162,7 +162,7 @@
             vect result ;
 
             result.x = a.x + b.x ;
-            result.y = a.y + b.y ;                                            // ADD //
+            result.y = a.y + b.y ;                                            
             result.z = a.z + b.z ;
 
             return result ;
@@ -174,7 +174,7 @@
             vect result ;
 
             result.x = a.x - b.x ;
-            result.y = a.y - b.y ;                                            // SUBTRACT //
+            result.y = a.y - b.y ;                                            
             result.z = a.z - b.z ;
 
             return result ;
@@ -185,7 +185,7 @@
         {
             vect result ;
 
-            double r = sqrt ((a.x * a.x) + (a.y * a.y)) ;                   // CONVERT FROM RECTANGULAR TO CYLINDRICAL //
+            double r = sqrt ((a.x * a.x) + (a.y * a.y)) ;                   
             double theta = atan2 (a.y, a.x) ;
 
             result.x = r ;
@@ -200,7 +200,7 @@
         {
             vect result ;
 
-            double r = sqrt ((a.x * a.x) + (a.y * a.y) + (a.z * a.z)) ;    // CONVERT FROM RECTANGULAR TO SPHERICAL //
+            double r = sqrt ((a.x * a.x) + (a.y * a.y) + (a.z * a.z)) ;    
             double theta = atan2 (a.y, a.x) ;
             double phi = acos (a.z / r) ;
 
@@ -216,7 +216,7 @@
         {
             vect result ;
 
-            result.x = a.x * cos (a.y) ;                                  // CONVERT FROM CYLINDRICAL TO RECTANGULAR //
+            result.x = a.x * cos (a.y) ;                                  
             result.y = a.x * sin (a.y) ;
             result.z = a.z ;
 
@@ -229,7 +229,7 @@
             vect result ;
 
             result.x = a.x * sin (a.z) * cos (a.y) ;
-            result.y = a.x * sin (a.z) * sin (a.y) ;                     // CONVERT FROM SPHERICAL TO RECTANGULAR //
+            result.y = a.x * sin (a.z) * sin (a.y) ;                     
             result.z = a.x * cos (a.z) ;
 
             return result ;
@@ -241,7 +241,7 @@
             vect result ;
 
             result.x = a.x * cos (a.z) ;
-            result.y = a.y ;                                             // CONVERT FROM SPHERICAL TO CYLINDRICAL //
+            result.y = a.y ;                                             
             result.z = a.x * sin (a.z) ;
 
             return result ;
@@ -255,7 +255,7 @@
             double phi = sqrt ((a.x * a.x) + (a.z * a.z)) ;
 
             result.x = phi  ;
-            result.y = a.y ;                                             // CONVERT FROM CYLINDRICAL TO SPHERICAL //
+            result.y = a.y ;                                             
             result.z = acos (a.z / phi) ;
 
             return result ;
@@ -265,12 +265,14 @@
     void printVect (vect a)
 
         {
-            printf ("(%lf, %lf, %lf)", a.x, a.y, a.z) ;                 // PRINT A VECTOR //
+            printf ("(%lf, %lf, %lf)", a.x, a.y, a.z) ;                 
         }
 
     void scanVect (vect* a)
 
         {
-            scanf ("%lf, %lf, %lf", &a -> x, &a -> y, &a -> z) ;       // GET A VECTOR //
+            scanf ("%lf, %lf, %lf", &a -> x, &a -> y, &a -> z) ;       
         }
+
+    // Think about new functions, like change of basis. Will matrix library be necessary ?
 
