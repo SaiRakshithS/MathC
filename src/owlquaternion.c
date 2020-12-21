@@ -114,3 +114,6 @@
         {
             scanf ("%lf %lf %lf %lf", &a -> re, &a -> im.x, &a -> im.y, &a -> im.z) ;
         }
+
+
+    // Some doubts on whether the quaternion library is actually necessary. They are very useful for multiple rotations, but not satisfied with present utility.
