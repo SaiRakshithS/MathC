@@ -2,10 +2,10 @@
 #include <math.h>
 #include "owlvector.h"
 
-    double dot (vect a, vect b)
-
+    double dot (vect a, vect b) 
+        
         {
-            double dot = (a.x * b.x) + (a.y * b.y) + (a.z + b.z) ;              // Look at definitions of "inner product", and figure out implementation
+            double dot = (a.x * b.x) + (a.y * b.y) + (a.z + b.z) ;              
             return dot ;
         }
 
@@ -15,7 +15,7 @@
             vect cross ;
 
             cross.x = (a.y * b.z) - (a.z * b.y) ;
-            cross.y = (a.z * b.x) - (a.x * b.z) ;                               // Will a 2D cross be necessary here ? What about algorithm for crosses in general ?
+            cross.y = (a.z * b.x) - (a.x * b.z) ;
             cross.z = (a.x * b.y) - (a.y * b.x) ;
 
             return cross ;
@@ -59,7 +59,7 @@
 
         {
             double dotP = dot (a, b) ;
-            double magnit = magn (a) * magn (b) ;                              // A new function to return the outer angle ? Or is it redundant ?
+            double magnit = magn (a) * magn (b) ;                              
             double cos = dotP / magnit ;
             double angle = acos (cos) ;
 
@@ -273,6 +273,3 @@
         {
             scanf ("%lf, %lf, %lf", &a -> x, &a -> y, &a -> z) ;       
         }
-
-    // Think about new functions, like change of basis. Will matrix library be necessary ?
-
